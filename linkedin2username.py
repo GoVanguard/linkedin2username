@@ -670,7 +670,7 @@ def write_files(company, domain, name_list):
                 files['firstl'].write(first + second[0] + domain + '\n')
                 files['firstl'].write(first + third[0] + domain + '\n')
                 files['fonly'].write(first + domain + '\n')
-                files['last_f'].write(last + '_' + first[0] + '\n')
+                files['last_f'].write(last + '_' + first[0] + domain + '\n')
             else:               # for users with only one last name
                 first, last = parse[0], parse[-1]
                 files['flast'].write(first[0] + last + domain + '\n')
@@ -679,7 +679,7 @@ def write_files(company, domain, name_list):
                 files['firstlast'].write(first + '.' + last + domain + '\n')
                 files['firstl'].write(first + last[0] + domain + '\n')
                 files['fonly'].write(first + domain + '\n')
-                files['last_f'].write(last + '_' + first[0] + '\n')
+                files['last_f'].write(last + '_' + first[0] + domain + '\n')
 
         # The exception below will try to weed out string processing errors
         # I've made in other parts of the program.
